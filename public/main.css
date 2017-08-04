@@ -1,0 +1,14 @@
+.talk-input {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.input-box {
+  width: 100%;
+}
+
+.submit {
+  position: absolute;
+  left: -9999px;
+}

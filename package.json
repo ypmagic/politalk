@@ -1,0 +1,24 @@
+{
+  "name": "politalk",
+  "version": "1.0.0",
+  "description": "Takes user input and based on the input, returns what a politician might say",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ypmagic/politalk.git"
+  },
+  "author": "Young Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ypmagic/politalk/issues"
+  },
+  "homepage": "https://github.com/ypmagic/politalk#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.5"
+  }
+}
