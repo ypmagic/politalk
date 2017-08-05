@@ -17,7 +17,7 @@ var politician = mongoose.model("politician", politicianSchema);
 // politician.create({
 //   name: "Clinton",
 //   queries: queries,
-//   fallback: "I’m Hillary Clinton. I have been proud and privileged to serve as First Lady, as a Senator from New York, and as Secretary of State. I’m the granddaughter of a factory worker and the grandmother of a wonderful one-year-old child. And every day I think about what we need to do to make sure that opportunity is available, not just for her, but for all of our children. I’ve traveled across our country over the last months listening, and learning, and I’ve put forward specific plans about how we’re going to create more good-paying jobs by investing in infrastructure and clean energy, by making it possible once again to invest in science and research and taking the opportunity posed by climate change to grow our economy."
+//   fallback: "I think that we've got so much business we have to do. We've talked a lot tonight about what we're against. But I'm for a lot of things. I don't want to just stop bad things from happening, I want to start good things from happening. And I believe, if I'm so fortunate to get the nomination, I will begin to work immediately on putting together an agenda, beginning to talk with members of Congress and others about how we can push forward. I want to have half a billion more solar panels deployed, the first four years. I want to have enough clean energy to power every home the next four years. I want us to keep working on the Affordable Care Act, to get not only to 100 percent coverage, but bring down the costs of prescription drugs and out-of-pocket costs."
 // });
 
 
