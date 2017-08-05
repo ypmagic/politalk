@@ -15,7 +15,7 @@ mongoose.connect(uristring, function (err, res) {
     console.log ('ERROR connecting to: ' + uristring + '. ' + err);
   } else {
         console.log ('Succeeded connected to: ' + uristring);
-      }
+  }
 });
 
 // SCHEMA
@@ -25,7 +25,7 @@ var politicianSchema = new mongoose.Schema({
   queries: Array
 });
 
-var politician = mongoose.model("politician", politicianSchema);
+var politician = mongoose.model("politician", politicianSchema, "politicians");
 // politician.create({
 //   name: "Clinton",
 //   queries: queries,
