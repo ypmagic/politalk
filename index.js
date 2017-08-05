@@ -4,7 +4,19 @@ var mongoose = require("mongoose");
 
 app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
-mongoose.connect("mongodb://localhost/politalk");
+
+var uristring =
+    process.env.MONGOLAB_URI ||
+    process.env.MONGOHQ_URL ||
+    'mongodb://localhost/HelloMongoose';
+
+mongoose.connect(uristring, function (err, res) {
+  if (err) {
+    console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+  } else {
+        console.log ('Succeeded connected to: ' + uristring);
+      }
+});
 
 //SCHEMA
 var politicianSchema = new mongoose.Schema({
@@ -33,6 +45,7 @@ app.get("/", function(req, res) {
   });
 });
 
-app.listen(3000, "127.0.0.1", function() {
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
   console.log("The server has started");
 })
