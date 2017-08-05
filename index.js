@@ -18,33 +18,30 @@ mongoose.connect(uristring, function (err, res) {
       }
 });
 
-//SCHEMA
-// var politicianSchema = new mongoose.Schema({
-//   name: String,
-//   fallback: String,
-//   queries: Array
-// });
-//
-// var politician = mongoose.model("politician", politicianSchema);
+// SCHEMA
+var politicianSchema = new mongoose.Schema({
+  name: String,
+  fallback: String,
+  queries: Array
+});
+
+var politician = mongoose.model("politician", politicianSchema);
 // politician.create({
 //   name: "Clinton",
 //   queries: queries,
 //   fallback: "I think that we've got so much business we have to do. We've talked a lot tonight about what we're against. But I'm for a lot of things. I don't want to just stop bad things from happening, I want to start good things from happening. And I believe, if I'm so fortunate to get the nomination, I will begin to work immediately on putting together an agenda, beginning to talk with members of Congress and others about how we can push forward. I want to have half a billion more solar panels deployed, the first four years. I want to have enough clean energy to power every home the next four years. I want us to keep working on the Affordable Care Act, to get not only to 100 percent coverage, but bring down the costs of prescription drugs and out-of-pocket costs."
 // });
 
-var connection = mongoose.connection;
-
 app.get("/", function(req, res) {
-  connection.on('error', console.error.bind(console, 'connection error:'));
-  connection.once('open', function () {
-      connection.db.collection("politicians", function(err, collection){
-          collection.find({}, function(err, poli) {
-              console.log(poli); // it will print your collection data
-              res.render("index", {
-                poli: JSON.stringify(poli),
-              });
-          })
+  politician.find({}, function(err, poli) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(poli);
+      res.render("index", {
+        poli: JSON.stringify(poli),
       });
+    }
   });
 });
 
