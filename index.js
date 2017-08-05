@@ -8,7 +8,7 @@ app.set("view engine", "ejs");
 var uristring =
     process.env.MONGOLAB_URI ||
     process.env.MONGOHQ_URL ||
-    'mongodb://localhost/HelloMongoose';
+    'mongodb://localhost/politalk';
 
 mongoose.connect(uristring, function (err, res) {
   if (err) {
