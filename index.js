@@ -23,9 +23,9 @@ var politicianSchema = new mongoose.Schema({
   name: String,
   fallback: String,
   queries: Array
-});
+}, { collection: "politicians" });
 
-var politician = mongoose.model("politician", politicianSchema, "politicians");
+var politician = mongoose.model("politician", politicianSchema);
 // politician.create({
 //   name: "Clinton",
 //   queries: queries,
