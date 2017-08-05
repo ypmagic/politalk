@@ -33,7 +33,7 @@ var politician = mongoose.model("politician", politicianSchema, "politicians");
 // });
 
 app.get("/", function(req, res) {
-  politician.find({}, function(err, poli) {
+  politician.find({name: "Clinton"}, function(err, poli) {
     if (err) {
       console.log(err);
     } else {
