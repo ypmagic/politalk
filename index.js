@@ -21,8 +21,8 @@ mongoose.connect(uristring, function (err, res) {
 //SCHEMA
 var politicianSchema = new mongoose.Schema({
   name: String,
-  queries: Array,
-  fallback: String
+  fallback: String,
+  queries: Array
 });
 
 var politician = mongoose.model("politician", politicianSchema);
