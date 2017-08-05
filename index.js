@@ -39,6 +39,7 @@ app.get("/", function(req, res) {
       console.log(err);
     } else {
       res.render("index", {
+        console.log(poli);
         poli: JSON.stringify(poli),
       });
     }
